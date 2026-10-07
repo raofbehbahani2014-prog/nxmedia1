@@ -1,0 +1,22 @@
+<%- include('../../partials/header') %>
+
+<section style="padding:40px 0;">
+  <div class="container">
+    <h1 style="font-size:24px;">فایل‌های پروژه</h1>
+    <div class="panel-layout" style="margin-top:24px;">
+      <%- include('../../partials/client-sidebar', { active: 'files' }) %>
+      <div class="panel-content">
+        <div class="form-group" style="margin-bottom:24px;">
+          <label>آپلود فایل جدید برای پروژه</label>
+          <input type="file">
+          <p style="font-size:12px; color:var(--gray); margin-top:6px;">فرمت‌های مجاز: jpg, png, mp4, mov, zip — حداکثر ۲۰۰ مگابایت</p>
+        </div>
+        <h3 style="margin-bottom:12px;">فایل‌های ارسال‌شده توسط تیم NxMedia</h3>
+        <div class="faq-item">📁 ریلز_کمپین_تابستانه_نسخه۱.mp4 — <span style="color:var(--gray);">۱۴۰۵/۰۵/۲۸</span></div>
+        <div class="faq-item">📁 طرح_گرافیکی_پست_محصول.png — <span style="color:var(--gray);">۱۴۰۵/۰۵/۲۵</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('../../partials/footer') %>

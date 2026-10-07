@@ -1,0 +1,51 @@
+<%- include('../../partials/header') %>
+
+<section style="padding:40px 0;">
+  <div class="container">
+    <h1 style="font-size:24px;">تقویم محتوایی اختصاصی</h1>
+    <div class="panel-layout" style="margin-top:24px;">
+      <%- include('../../partials/client-sidebar', { active: 'calendar' }) %>
+      <div class="panel-content">
+        <table style="width:100%; border-collapse:collapse; font-size:14px;">
+          <thead>
+            <tr style="background:#F8F6FC; text-align:right;">
+              <th style="padding:12px;">تاریخ انتشار</th>
+              <th style="padding:12px;">نوع محتوا</th>
+              <th style="padding:12px;">موضوع</th>
+              <th style="padding:12px;">وضعیت</th>
+              <th style="padding:12px;">اقدام</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-top:1px solid var(--border);">
+              <td style="padding:12px;">۱۴۰۵/۰۶/۰۵</td>
+              <td style="padding:12px;">ریلز</td>
+              <td style="padding:12px;">معرفی محصول جدید</td>
+              <td style="padding:12px;">در انتظار تایید</td>
+              <td style="padding:12px;"><button class="btn btn-primary" style="padding:6px 14px;">تایید</button></td>
+            </tr>
+            <tr style="border-top:1px solid var(--border);">
+              <td style="padding:12px;">۱۴۰۵/۰۶/۰۸</td>
+              <td style="padding:12px;">پست</td>
+              <td style="padding:12px;">نظرات مشتریان</td>
+              <td style="padding:12px;">تایید شده</td>
+              <td style="padding:12px;">—</td>
+            </tr>
+            <tr style="border-top:1px solid var(--border);">
+              <td style="padding:12px;">۱۴۰۵/۰۶/۱۲</td>
+              <td style="padding:12px;">استوری</td>
+              <td style="padding:12px;">نظرسنجی محصول</td>
+              <td style="padding:12px;">پیش‌نویس</td>
+              <td style="padding:12px;">—</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="color:var(--gray); font-size:13px; margin-top:16px;">
+          سیستم تایید آنلاین محتوا در نسخه نهایی امکان مشاهده پیش‌نمایش، ثبت بازخورد و تایید نهایی هر آیتم را فراهم می‌کند.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('../../partials/footer') %>

@@ -1,0 +1,28 @@
+<%- include('../../partials/header') %>
+
+<section style="padding:40px 0;">
+  <div class="container">
+    <h1 style="font-size:24px;">خوش آمدید، <%= currentUser.name %> 👋</h1>
+    <div class="panel-layout" style="margin-top:24px;">
+      <%- include('../../partials/client-sidebar', { active: 'dashboard' }) %>
+      <div class="panel-content">
+        <div class="grid grid-3" style="margin-bottom:30px;">
+          <div class="stat-box"><strong>۲</strong><span>پروژه فعال</span></div>
+          <div class="stat-box"><strong>۸</strong><span>محتوای در انتظار تایید</span></div>
+          <div class="stat-box"><strong>۱</strong><span>فاکتور در انتظار پرداخت</span></div>
+        </div>
+        <h3 style="margin-bottom:14px;">آخرین فعالیت‌ها</h3>
+        <div class="faq-item">
+          <h3>تقویم محتوایی مرداد ماه آماده تایید است</h3>
+          <p>لطفا با مراجعه به بخش «تقویم محتوایی» محتواهای پیشنهادی را بررسی و تایید کنید.</p>
+        </div>
+        <div class="faq-item">
+          <h3>فاکتور شماره ۱۰۲۴ صادر شد</h3>
+          <p>برای مشاهده و پرداخت آنلاین به بخش «فاکتورها و پرداخت» مراجعه کنید.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('../../partials/footer') %>

@@ -1,0 +1,55 @@
+<%- include('../../partials/admin-header', { active: 'leads' }) %>
+
+<div class="admin-topbar">
+  <h1>📥 درخواست‌های دریافتی</h1>
+</div>
+
+<div class="admin-card" style="margin-bottom:20px;">
+  <h3 style="margin-top:0;">درخواست‌های پروژه (<%= leads.projectRequests.length %>)</h3>
+  <% if (!leads.projectRequests.length) { %>
+    <p style="color:var(--gray);">موردی ثبت نشده است.</p>
+  <% } else { %>
+    <table>
+      <thead><tr><th>نام</th><th>تماس</th><th>خدمت</th><th>تاریخ</th></tr></thead>
+      <tbody>
+        <% leads.projectRequests.slice().reverse().forEach(l => { %>
+          <tr><td><%= l.name || '-' %></td><td><%= l.phone || '-' %></td><td><%= l.service || '-' %></td><td style="font-size:11px; color:var(--gray);"><%= l.date || '-' %></td></tr>
+        <% }) %>
+      </tbody>
+    </table>
+  <% } %>
+</div>
+
+<div class="admin-card" style="margin-bottom:20px;">
+  <h3 style="margin-top:0;">رزروهای مشاوره (<%= leads.consultations.length %>)</h3>
+  <% if (!leads.consultations.length) { %>
+    <p style="color:var(--gray);">موردی ثبت نشده است.</p>
+  <% } else { %>
+    <table>
+      <thead><tr><th>نام</th><th>تماس</th><th>تاریخ پیشنهادی</th><th>ثبت‌شده در</th></tr></thead>
+      <tbody>
+        <% leads.consultations.slice().reverse().forEach(l => { %>
+          <tr><td><%= l.name || '-' %></td><td><%= l.phone || '-' %></td><td><%= l.date || '-' %> <%= l.time || '' %></td><td style="font-size:11px; color:var(--gray);"><%= l.createdAt || '-' %></td></tr>
+        <% }) %>
+      </tbody>
+    </table>
+  <% } %>
+</div>
+
+<div class="admin-card">
+  <h3 style="margin-top:0;">پیام‌های تماس با ما (<%= leads.contact.length %>)</h3>
+  <% if (!leads.contact.length) { %>
+    <p style="color:var(--gray);">موردی ثبت نشده است.</p>
+  <% } else { %>
+    <table>
+      <thead><tr><th>نام</th><th>تماس</th><th>پیام</th><th>تاریخ</th></tr></thead>
+      <tbody>
+        <% leads.contact.slice().reverse().forEach(l => { %>
+          <tr><td><%= l.name || '-' %></td><td><%= l.phone || '-' %></td><td><%= l.message || '-' %></td><td style="font-size:11px; color:var(--gray);"><%= l.date || '-' %></td></tr>
+        <% }) %>
+      </tbody>
+    </table>
+  <% } %>
+</div>
+
+<%- include('../../partials/admin-footer') %>

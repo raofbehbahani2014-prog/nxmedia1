@@ -1,0 +1,41 @@
+<%- include('../../partials/header') %>
+
+<section style="padding:40px 0;">
+  <div class="container">
+    <h1 style="font-size:24px;">فاکتورها و پرداخت آنلاین</h1>
+    <div class="panel-layout" style="margin-top:24px;">
+      <%- include('../../partials/client-sidebar', { active: 'invoices' }) %>
+      <div class="panel-content">
+        <table style="width:100%; border-collapse:collapse; font-size:14px;">
+          <thead>
+            <tr style="background:#F8F6FC; text-align:right;">
+              <th style="padding:12px;">شماره فاکتور</th>
+              <th style="padding:12px;">مبلغ</th>
+              <th style="padding:12px;">وضعیت</th>
+              <th style="padding:12px;">اقدام</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-top:1px solid var(--border);">
+              <td style="padding:12px;">#۱۰۲۴</td>
+              <td style="padding:12px;">۱۴,۹۰۰,۰۰۰ تومان</td>
+              <td style="padding:12px; color:#DC2626;">در انتظار پرداخت</td>
+              <td style="padding:12px;"><button class="btn btn-primary" style="padding:6px 14px;">پرداخت آنلاین</button></td>
+            </tr>
+            <tr style="border-top:1px solid var(--border);">
+              <td style="padding:12px;">#۱۰۱۱</td>
+              <td style="padding:12px;">۱۴,۹۰۰,۰۰۰ تومان</td>
+              <td style="padding:12px; color:#16A34A;">پرداخت‌شده</td>
+              <td style="padding:12px;">دانلود فاکتور</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="color:var(--gray); font-size:13px; margin-top:16px;">
+          اتصال درگاه پرداخت آنلاین واقعی (زرین‌پال / آی‌دی‌پی و...) و صدور خودکار فاکتور PDF در فاز توسعه بک‌اند انجام می‌شود.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('../../partials/footer') %>
